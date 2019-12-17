@@ -1,0 +1,25 @@
+<div>
+        <a [routerLink]="['/']" class="btn btn-outline-info btn-md float-right">Continue shopping</a>
+        <table class="table table-striped table-bordered">
+            <thead class="thead-dark">
+            <tr>
+                <th>Store Name</th>
+                <th>Product Name</th>
+                <th>Category</th>
+                <th>Current Quantity</th>
+                <th>Reorder</th>
+                <!--<th></th>-->
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let i of inventory">
+                <td>{{i.StoreName}}</td>
+                <td>{{i.BrandName}} {{i.ProductName}}</td>
+                <td>{{i.CategoryName}}</td>
+                <td>{{i.CurrentQuantity}}</td>
+                <td><a [routerLink]="['/admin/reorder']" class='btn btn-primary'>ReOrder?</a></td>
+               <!-- <td><a class='btn btn-primary stretched-link' [routerLink]="['/customer/my-account/order-details/',b.OrderId]">Go to Order?</a></td>-->
+            </tr>
+        </tbody>
+        </table>
+    </div>

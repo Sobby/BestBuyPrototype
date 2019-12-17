@@ -1,0 +1,58 @@
+<br>
+<br>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-sm-4">
+            <ul class="list-group">
+                <li class="list-group-item hoverable">
+                    <a href="#">Homepage</a>
+                </li>
+                <li class="list-group-item hoverable">
+                        <a href="/customer/my-account">Your Profile</a>
+                    </li>
+                <li class="list-group-item hoverable">
+                    <a [routerLink]="['/cart/shopping-cart']">Your Cart</a>
+                </li>
+                <li class="list-group-item hoverable">
+                    <a [routerLink]="['my-orders']">Your Orders</a>
+                </li>
+                <li class="list-group-item hoverable">
+                    <a [routerLink]="['my-cards']">Your Cards</a>
+                </li>
+            </ul>
+            <div class="mt-3">
+                    <a class="btn btn-success " [routerLink]="['/customer/edit-info']"
+                        >Edit Info?</a>
+                </div>
+        </div>
+        <div class="col-sm-8">
+            <form>
+                <div class="row">
+                    <img src="https://angular-shoppingcart.firebaseapp.com/assets/img/malecostume-512.png" [alt]="loggedUser.FullName"
+                        style="width: 35%; height: 35%;">
+                    <div class="col-md-8 mt-3">
+                        <label class="font-weight-bold" for="userName">Name</label>
+                        <p style="font-size: 15px;">{{loggedUser.FirstName}} {{loggedUser.LastName}}</p>
+                    </div>
+                    <div class="col-md-8 mb-3">
+                            <label class="font-weight-bold" for="Address">Address</label>
+                            <p style="font-size: 15px;">{{loggedUser.AddressOne}} {{AddressTwo}}, {{loggedUser.Town}}, {{loggedUser.ZipCode}}, {{loggedUser.Country}}</p>
+                        </div>
+                    <div class="col-md-8 mb-3">
+                        <label class="font-weight-bold" for="emailId">Email</label>
+                        <p style="font-size: 15px;">{{loggedUser.Email}}</p>
+                    </div>
+                    <div class="col-md-8 mb-3">
+                        <label class="font-weight-bold" for="Mobile">Mobile</label>
+                        <p style="font-size: 15px;">+1 {{loggedUser.Mobile}}</p>
+                    </div>
+                    <div class="col-md-8 mb-3">
+                        <label class="font-weight-bold" for="country">Country</label>
+                        <p style="font-size: 15px;">{{loggedUser.Country}}</p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
